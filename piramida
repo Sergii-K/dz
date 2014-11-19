@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class piramida {
+	public static void main	(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter line count!");
+		int lc = 0;
+		int[] a = new int[1];
+		lc = scanner.nextInt();
+		for (int i = 1; i <= lc; i++){
+			int[]piramida = new int[i];
+			for (int j = i; lc > j; j++){
+				System.out.print(" ");
+			}
+			for (int k = 0; k < i; k++){
+				if (k==0 || k==(i-1)){
+					piramida[k] = 1;					
+				}
+				else {
+					piramida[k] = a[k] + a[k-1];
+					}
+				System.out.print(piramida[k]+" ");
+			}
+			a = piramida;
+			System.out.println();
+		}
+	}
+}
